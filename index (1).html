@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل استخدام WhatsApp Sender Pro - النسخة التجريبية</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            direction: rtl;
+        }
+        header {
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        nav {
+            background-color: #2B2B2B;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #25D366;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2B2B2B;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #25D366;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+        }
+        ul, ol {
+            margin: 1rem 0;
+            padding-right: 2rem;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #2B2B2B;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #e0f7fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2B2B2B;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>دليل استخدام برنامج WhatsApp Sender Pro - النسخة التجريبية</h1>
+        <p>إعداد: فريق التطوير | تاريخ: 29 أغسطس 2025</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">مقدمة</a></li>
+            <li><a href="#requirements">متطلبات النظام</a></li>
+            <li><a href="#installation">التثبيت</a></li>
+            <li><a href="#interface">واجهة المستخدم</a></li>
+            <li><a href="#contacts">إدارة جهات الاتصال</a></li>
+            <li><a href="#templates">إدارة القوالب</a></li>
+            <li><a href="#sending">إرسال الرسائل</a></li>
+            <li><a href="#settings">الإعدادات</a></li>
+            <li><a href="#sessions">حفظ الجلسات</a></li>
+            <li><a href="#troubleshooting">حل المشاكل</a></li>
+            <li><a href="#notes">ملاحظات النسخة التجريبية</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="intro">
+            <h2>مقدمة</h2>
+            <p>برنامج <strong>WhatsApp Sender Pro</strong> هو أداة مصممة لتسهيل إرسال الرسائل التسويقية عبر واتساب بطريقة تلقائية وذكية. هذا الدليل موجه لمستخدمي النسخة التجريبية التي تنتهي صلاحيتها في 30 أغسطس 2025. يغطي الدليل كيفية إعداد البرنامج، إدارة جهات الاتصال، إنشاء القوالب، وإرسال الرسائل بكفاءة.</p>
+        </section>
+
+        <section id="requirements">
+            <h2>متطلبات النظام</h2>
+            <ul>
+                <li><strong>نظام التشغيل:</strong> Windows 10 أو أحدث</li>
+                <li><strong>المتصفح:</strong> Google Chrome (أحدث إصدار)</li>
+                <li><strong>اتصال الإنترنت:</strong> اتصال مستقر</li>
+                <li><strong>مفتاح API:</strong> مفتاح من Groq لتوليد القوالب الذكية (اختياري)</li>
+                <li><strong>ملفات الإدخال:</strong> ملفات CSV أو Excel لاستيراد جهات الاتصال والقوالب</li>
+            </ul>
+        </section>
+
+        <section id="installation">
+            <h2>تثبيت البرنامج</h2>
+            <p>تم إنشاء البرنامج باستخدام الأمر التالي:</p>
+            <pre><code>python -m PyInstaller --onefile --noconsole WhatsApp_Sender_Pro.py</code></pre>
+            <p>لتشغيل النسخة التجريبية:</p>
+            <ol>
+                <li>تأكد من تثبيت Python 3.8 أو أحدث.</li>
+                <li>قم بتشغيل الملف التنفيذي الناتج.</li>
+                <li>إذا ظهرت رسالة انتهاء الفترة التجريبية، تواصل مع فريق الدعم للترقية إلى النسخة الكاملة.</li>
+            </ol>
+        </section>
+
+        <section id="interface">
+            <h2>واجهة المستخدم</h2>
+            <p>الواجهة مقسمة إلى علامات تبويب رئيسية:</p>
+            <ul>
+                <li><strong>جهات الاتصال:</strong> لإضافة واستيراد جهات الاتصال.</li>
+                <li><strong>القوالب:</strong> لإنشاء قوالب الرسائل أو توليدها ذكيًا.</li>
+                <li><strong>الإعدادات:</strong> لتخصيص إعدادات الإرسال وAPI.</li>
+                <li><strong>السجلات:</strong> لعرض سجل الإرسالات (قيد التطوير).</li>
+            </ul>
+            <h3>شريط الأدوات</h3>
+            <ul>
+                <li><strong>تشغيل Chrome:</strong> يفتح متصفح Chrome مع ملف تعريف واتساب.</li>
+                <li><strong>إغلاق Chrome:</strong> يغلق المتصفح.</li>
+                <li><strong>إرسال الرسائل:</strong> يبدأ إرسال الرسائل إلى جهات الاتصال المحددة.</li>
+                <li><strong>حفظ الجلسة:</strong> يحفظ سجل الإرسال الحالي.</li>
+            </ul>
+        </section>
+
+        <section id="contacts">
+            <h2>إدارة جهات الاتصال</h2>
+            <h3>إضافة جهة اتصال يدويًا</h3>
+            <ol>
+                <li>انتقل إلى علامة تبويب "جهات الاتصال".</li>
+                <li>اضغط على زر "إضافة جهة اتصال".</li>
+                <li>أدخل الاسم ورقم الهاتف (مثال: <code>+201000000000</code>).</li>
+                <li>اضغط على "حفظ".</li>
+            </ol>
+            <h3>استيراد جهات الاتصال</h3>
+            <ol>
+                <li>اضغط على زر "استيراد جهات الاتصال".</li>
+                <li>اختر ملف CSV أو Excel يحتوي على عمودين: <code>name</code> و<code>phone</code>.</li>
+                <li>تأكد من أن أرقام الهواتف تبدأ برمز الدولة (مثل <code>+20</code>).</li>
+                <li>انتظر رسالة التأكيد التي توضح عدد جهات الاتصال المضافة والمتخطاة.</li>
+            </ol>
+        </section>
+
+        <section id="templates">
+            <h2>إدارة القوالب</h2>
+            <h3>إضافة قالب يدويًا</h3>
+            <ol>
+                <li>انتقل إلى علامة تبويب "القوالب".</li>
+                <li>اضغط على زر "إضافة قالب يدويًا".</li>
+                <li>أدخل نص القالب (استخدم <code>{Name}</code> لإدراج اسم جهة الاتصال).</li>
+                <li>اضغط على "حفظ".</li>
+            </ol>
+            <h3>توليد قوالب ذكية</h3>
+            <ol>
+                <li>في علامة تبويب "القوالب"، أدخل وصف المنتج في حقل "وصف المنتج".</li>
+                <li>اضغط على زر "توليد قوالب ذكية".</li>
+                <li>سيتم إنشاء 10 قوالب باللهجة المصرية باستخدام API Groq (يتطلب مفتاح API).</li>
+            </ol>
+            <h3>استيراد القوالب</h3>
+            <ol>
+                <li>اضغط على زر "استيراد قوالب".</li>
+                <li>اختر ملف نصي أو CSV أو Excel يحتوي على القوالب.</li>
+                <li>تأكد من أن الملف يحتوي على عمود باسم <code>template</code> أو <code>text</code> أو <code>message</code>.</li>
+            </ol>
+        </section>
+
+        <section id="sending">
+            <h2>إرسال الرسائل</h2>
+            <ol>
+                <li>في علامة تبويب "جهات الاتصال"، حدد جهات الاتصال المطلوبة.</li>
+                <li>في علامة تبويب "القوالب"، حدد القوالب المراد استخدامها.</li>
+                <li>في علامة تبويب "الإعدادات"، اختر نوع الرسائل:
+                    <ul>
+                        <li><strong>عشوائي:</strong> يختار قالبًا عشوائيًا لكل جهة اتصال.</li>
+                        <li><strong>محدد:</strong> يستخدم قالبًا واحدًا لجميع جهات الاتصال.</li>
+                    </ul>
+                </li>
+                <li>اضغط على زر "إرسال الرسائل" في شريط الأدوات.</li>
+                <li>إذا لم يكن Chrome مفتوحًا، سيتم تشغيله تلقائيًا (حسب الإعدادات).</li>
+                <li>قم بمسح رمز QR لتسجيل الدخول إلى واتساب إذا لزم الأمر.</li>
+                <li>سيبدأ البرنامج في إرسال الرسائل مع التأخير المحدد في الإعدادات.</li>
+            </ol>
+        </section>
+
+        <section id="settings">
+            <h2>الإعدادات</h2>
+            <p>في علامة تبويب "الإعدادات"، يمكنك تخصيص:</p>
+            <ul>
+                <li><strong>مفتاح API من Groq:</strong> لتوليد القوالب الذكية.</li>
+                <li><strong>موجه النظام:</strong> لتحديد كيفية إنشاء الرسائل.</li>
+                <li><strong>التأخير:</strong> الوقت بين كل رسالة (بالثواني).</li>
+                <li><strong>عدد المحاولات:</strong> عدد محاولات إعادة الإرسال عند الفشل.</li>
+                <li><strong>عدد الخيوط:</strong> محدود بـ 1 في النسخة التجريبية.</li>
+                <li><strong>مجلد ملفات تعريف الارتباط:</strong> لتخزين بيانات تسجيل الدخول. لربط أكثر من جهاز (حساب واتساب مختلف)، أدخل اسم مجلد جديد (مثل <code>profile_device1</code> أو <code>profile_device2</code>) في حقل "مجلد ملفات تعريف الارتباط". بعد حفظ الإعدادات، اضغط على "إغلاق Chrome" ثم "تشغيل Chrome" لفتح المتصفح مع المجلد الجديد. ستظهر شاشة تسجيل الدخول إلى واتساب مع رمز QR جديد لربط الحساب الجديد.</li>
+                <li><strong>تشغيل Chrome تلقائيًا:</strong> لفتح المتصفح عند بدء الإرسال.</li>
+                <li><strong>الحفاظ على Chrome مفتوحًا:</strong> لإبقاء المتصفح مفتوحًا بعد الإرسال.</li>
+            </ul>
+            <p>اضغط على زر "حفظ الإعدادات" بعد التعديل.</p>
+        </section>
+
+        <section id="sessions">
+            <h2>حفظ الجلسات</h2>
+            <ol>
+                <li>بعد إرسال الرسائل، اضغط على زر "حفظ الجلسة" في شريط الأدوات.</li>
+                <li>أدخل اسم الجلسة.</li>
+                <li>سيتم حفظ سجل آخر 1000 رسالة مرسلة.</li>
+            </ol>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>حل المشاكل</h2>
+            <ul>
+                <li><strong>فشل فتح Chrome:</strong> تأكد من تثبيت Chrome وتحديثه.</li>
+                <li><strong>فشل إرسال الرسائل:</strong> تحقق من اتصال الإنترنت ورمز QR.</li>
+                <li><strong>فشل توليد القوالب:</strong> تأكد من إدخال مفتاح API صالح.</li>
+                <li><strong>مشاكل قاعدة البيانات:</strong> تحقق من وجود مساحة على القرص.</li>
+                <li><strong>فشل ربط جهاز جديد:</strong> تأكد من إدخال اسم مجلد جديد صحيح وإغلاق Chrome قبل إعادة تشغيله.</li>
+            </ul>
+        </section>
+
+        <section id="notes">
+            <h2>ملاحظات النسخة التجريبية</h2>
+            <div class="note">
+                <ul>
+                    <li>تنتهي صلاحية النسخة التجريبية في 30 أغسطس 2025.</li>
+                    <li>عدد الخيوط محدود بـ 1.</li>
+                    <li>السجلات قيد التطوير.</li>
+                    <li>للترقية إلى النسخة الكاملة، تواصل مع فريق الدعم.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 WhatsApp Sender Pro. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
