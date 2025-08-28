@@ -13,12 +13,13 @@
             background-color: #f4f4f4;
             color: #333;
             direction: rtl;
+            -webkit-text-size-adjust: 100%; /* Prevents iOS font scaling */
         }
         header {
             background-color: #25D366;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem 1rem; /* Adjusted padding */
         }
         nav {
             background-color: #2B2B2B;
@@ -42,6 +43,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease; /* Smooth transition */
         }
         nav ul li a:hover {
             color: #25D366;
@@ -63,6 +65,7 @@
         }
         h1 {
             font-size: 2.5rem;
+            margin: 0; /* Remove default margin */
         }
         h2 {
             font-size: 1.8rem;
@@ -80,19 +83,23 @@
             background-color: #f0f0f0;
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
+            font-size: 0.9em; /* Slightly smaller font */
         }
         pre {
             background-color: #2B2B2B;
             color: white;
             padding: 1rem;
             border-radius: 8px;
-            overflow-x: auto;
+            overflow-x: auto; /* Ensures code blocks are scrollable */
+            white-space: pre-wrap; /* Wraps long lines */
+            word-wrap: break-word; /* Breaks long words */
         }
         .note {
             background-color: #e0f7fa;
             padding: 1rem;
             border-radius: 4px;
             margin: 1rem 0;
+            border-right: 5px solid #00bcd4; /* Added a highlight border */
         }
         footer {
             text-align: center;
@@ -100,7 +107,12 @@
             background-color: #2B2B2B;
             color: white;
         }
+
+        /* --- Responsive Design --- */
         @media (max-width: 768px) {
+            body {
+                font-size: 16px; /* Base font size for mobile */
+            }
             nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -109,13 +121,38 @@
                 margin: 0.5rem 0;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem; /* Adjusted for smaller screens */
             }
             h2 {
                 font-size: 1.5rem;
             }
+            h3 {
+                font-size: 1.2rem;
+            }
             section {
+                padding: 1.5rem 1rem; /* Adjusted padding */
+                margin-bottom: 1.5rem;
+            }
+            .container {
+                margin: 1rem auto;
+            }
+            ul, ol {
+                padding-right: 1.5rem; /* Reduce indentation on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
                 padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            p, li {
+                font-size: 0.95rem; /* Slightly smaller text for very small screens */
             }
         }
     </style>
